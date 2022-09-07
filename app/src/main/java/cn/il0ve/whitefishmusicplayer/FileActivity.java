@@ -34,6 +34,7 @@ public class FileActivity extends AppCompatActivity {
         //获取按钮组件
         Button buttonFile2=(Button)findViewById(R.id.button_file2);
         Button buttonView2=(Button)findViewById(R.id.button_view2);
+        Button buttonHelp2=(Button)findViewById(R.id.button_help2);
         Button buttonConfirmPath=(Button)findViewById(R.id.button_confirm_path);
         Button buttonCancelPath=(Button)findViewById(R.id.button_cancel_path);
 
@@ -50,6 +51,7 @@ public class FileActivity extends AppCompatActivity {
         //添加按钮点击事件
         buttonFile2.setOnClickListener(new ButtonFiel2OnClickListener());
         buttonView2.setOnClickListener(new ButtonView2OnClickListener());
+        buttonHelp2.setOnClickListener(new ButtonHelp2OnClickListener());
         buttonConfirmPath.setOnClickListener(new ButtonConfirmPathOnClickListener());
         buttonCancelPath.setOnClickListener(new ButtonCancelPathOnClickListener());
 
@@ -104,14 +106,29 @@ public class FileActivity extends AppCompatActivity {
             //
         }
     }
+
     public class ButtonView2OnClickListener implements View.OnClickListener{
 
         @Override
         public void onClick(View view) {
             //
+            Intent intent=new Intent(FileActivity.this,MainActivity.class);
+            startActivity(intent);
             finish();
         }
     }
+
+    public class ButtonHelp2OnClickListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+            //
+            Intent intent=new Intent(FileActivity.this,HelpActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
     public class ButtonConfirmPathOnClickListener implements View.OnClickListener{
 
         @Override
@@ -125,6 +142,7 @@ public class FileActivity extends AppCompatActivity {
             finish();
         }
     }
+
     public class ButtonCancelPathOnClickListener implements View.OnClickListener{
 
         @Override

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FileActivity">
+    tools:context=".HelpActivity">
 
 <LinearLayout
     android:id="@+id/menu"
@@ -14,19 +14,19 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <Button
-        android:id="@+id/button_file2"
+        android:id="@+id/button_file3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/file_button_text" />
 
     <Button
-        android:id="@+id/button_view2"
+        android:id="@+id/button_view3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_button_text" />
 
     <Button
-        android:id="@+id/button_help2"
+        android:id="@+id/button_help3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/help_button_text" />
@@ -40,40 +40,35 @@
     app:layout_constraintTop_toBottomOf="@id/menu">
 
     <TextView
-        android:id="@+id/textView_path"
+        android:id="@+id/textView_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/path_text"
-        android:visibility="invisible" />
+        android:text="@string/code_text" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ListView>
-
-</LinearLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
+    <TextView
+    android:id="@+id/textView_version"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-    app:layout_constraintBottom_toBottomOf="parent">
+    android:text="@string/version_text" />
 
-    <Button
-        android:id="@+id/button_confirm_path"
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/confirm_button_text" />
+        android:text="@string/contact_text" />
 
-    <Button
-        android:id="@+id/button_cancel_path"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cancel_button_text" />
+    <TextView
+    android:id="@+id/textView_email"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/email_text" />
+
 </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

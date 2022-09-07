@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //Button对象获取Button安卓组件
         Button buttonFile=(Button) findViewById(R.id.button_file);
         Button buttonView=(Button) findViewById(R.id.button_view);
+        Button buttonHelp=(Button) findViewById(R.id.button_help);
         Button buttonPrevious=(Button) findViewById(R.id.button_previous);
         Button buttonNext=(Button) findViewById(R.id.button_next);
         Button buttonPlay=(Button) findViewById(R.id.button_play);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //Button对象设置点击事件的监听
         buttonFile.setOnClickListener(new ButtonFileOnClickListener());
         buttonView.setOnClickListener(new ButtonViewOnClickListener());
+        buttonHelp.setOnClickListener(new ButtonHelpOnClickListener());
         buttonPrevious.setOnClickListener(new ButtonPreviousOnClickListener());
         buttonNext.setOnClickListener(new ButtonNextOnClickListener());
         buttonPlay.setOnClickListener(new ButtonPlayOnClickListener());
@@ -231,6 +233,20 @@ public class MainActivity extends AppCompatActivity {
      * Button对象的点击事件监听
      * 处理点击事件，实现按钮点击的功能
      */
+    public class ButtonHelpOnClickListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+            //
+            Intent intent=new Intent(MainActivity.this,HelpActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * Button对象的点击事件监听
+     * 处理点击事件，实现按钮点击的功能
+     */
     public class ButtonPreviousOnClickListener implements View.OnClickListener{
 
         @Override
@@ -279,6 +295,15 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("playing",false);
             startService(intent);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //播放音乐
+        Intent intent=new Intent(MainActivity.this,MusicPlayerService.class);
+        intent.putExtra("playing",true);
+        startService(intent);
     }
 
     @Override

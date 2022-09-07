@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">WhiteFishMusicPlayer</string>
     <string name="app_name_chinese">白水鱼音乐播放器</string>
+    <string name="code_text">版本号</string>
+    <string name="version_text">v0.1</string>
     <string name="title_activity_file">FileActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="file_button_text">文件</string>
     <string name="view_button_text">显示</string>
+    <string name="help_button_text">帮助</string>
     <string name="confirm_button_text">确认</string>
     <string name="cancel_button_text">取消</string>
     <string name="play_button_text">播放</string>
@@ -16,5 +19,7 @@
     <string name="lyric_text">显示歌词</string>
     <string name="path_text">显示文件路径</string>
     <string name="time_text">显示音乐时间</string>
+    <string name="contact_text">联系邮箱</string>
+    <string name="email_text">735919786@163.com</string>
 
 </resources>
